@@ -119,7 +119,7 @@ button.btn-danger:hover {
 }
 .logo-section {
   position: relative;
-  height: 150px; /* Altura total de la sección */
+  height: 200px; /* Altura total de la sección */
   overflow: hidden;
   display: flex;
   justify-content: center;
