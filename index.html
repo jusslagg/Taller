@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Taller de Motos</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("82nGO028bhTWOL9Iw");
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Taller de Motos - Mecánica Ligera</h1>
+      <nav>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <h2>¡Bienvenido a tu Taller de Confianza!</h2>
+    </section>
+
+    <section id="servicios" class="py-5">
+      <h2>Nuestros Servicios</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 servicio">
+            <h3>Mantenimiento General</h3>
+            <p>Nos encargamos de la revisión y mantenimiento de tu moto.</p>
+          </div>
+          <div class="col-md-4 servicio">
+            <h3>Service completo</h3>
+            <p>Hacemos el service completo de tu moto.</p>
+          </div>
+          <div class="col-md-4 servicio">
+            <h3>Personalización</h3>
+            <p>Transforma tu moto con nuestro servicio de personalización.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="py-5">
+      <h2>Galería de Trabajos</h2>
+      <div class="galeria">
+        <img src="moto1.jpg" alt="Moto 1" />
+        <img src="moto2.jpg" alt="Moto 2" />
+        <img src="moto3.jpg" alt="Moto 3" />
+      </div>
+    </section>
+
+    <section
+      id="contacto"
+      class="d-flex justify-content-center align-items-center"
+      style="min-height: 100vh"
+    >
+      <div class="container">
+        <h2>Contacto</h2>
+        <form id="form" class="mt-4">
+          <div class="form-group">
+            <label for="from_name">Nombre y apellido</label>
+            <input
+              type="text"
+              class="form-control"
+              name="from_name"
+              id="from_name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <input
+              type="text"
+              class="form-control"
+              name="message"
+              id="message"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email_id">Correo</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email_id"
+              id="email_id"
+              required
+            />
+          </div>
+
+          <button type="submit" id="button" class="btn btn-danger">
+            Enviar Email
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Taller de Motos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
