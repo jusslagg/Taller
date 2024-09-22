@@ -117,3 +117,27 @@ button.btn-danger:hover {
   transform: scale(1.05);
   transition: background-color 0.3s, transform 0.3s;
 }
+.logo-section {
+  position: relative;
+  height: 150px; /* Altura total de la sección */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-background {
+  width: 150px; /* Igual al ancho del logo */
+  height: 145px; /* Reduce la altura en 5px */
+  background: url("img/4xZc.gif") no-repeat center center;
+  background-size: cover; /* Asegura que el GIF cubra el área */
+  position: absolute; /* Para que se superponga al logo */
+  border-radius: 50%; /* Hace que el GIF sea redondo */
+}
+
+.logo-image {
+  position: relative;
+  width: 150px; /* Tamaño del logo */
+  height: auto; /* Mantiene la proporción del logo */
+  z-index: 10; /* Asegura que el logo esté encima */
+}
