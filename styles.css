@@ -7,26 +7,53 @@
 body {
   font-family: "Arial", sans-serif;
   background: linear-gradient(135deg, #ff4500, #ffd700);
-  color: #333; /* Color más oscuro para mejor legibilidad */
+  color: #333;
 }
 
 header {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
   background: rgba(0, 0, 0, 0.7);
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
 }
 
 header h1 {
   margin-bottom: 10px;
-  color: #fff; /* Título en blanco */
+  color: #fff;
+  flex-grow: 1; /* Permite que el título ocupe el espacio disponible */
+}
+
+.logo-section {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+.logo-background {
+  width: 50px;
+  height: 50px;
+  background: url("img/4xZc.gif") no-repeat center center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.logo-image {
+  position: relative;
+  width: 50px;
+  height: auto;
+  z-index: 10;
 }
 
 nav ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+  margin-left: auto; /* Alinea el menú a la derecha */
 }
 
 nav ul li {
-  display: inline;
   margin: 0 15px;
 }
 
@@ -37,39 +64,28 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffd700; /* Amarillo claro */
+  color: #ffd700;
   transform: scale(1.1);
 }
 
 .banner {
   background: url("banner.jpg") no-repeat center center/cover;
-  padding: 60px 0;
-  text-align: center;
+  padding: 60px 20px;
+  text-align: left;
   animation: fadeIn 2s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 h2 {
   text-align: center;
   margin: 30px 0;
-  color: #333; /* Color más oscuro para los encabezados */
 }
 
 .servicio {
-  background: rgba(255, 255, 255, 0.8); /* Fondo más claro */
+  background: rgba(255, 255, 255, 0.8);
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s;
-  color: #333; /* Color de texto oscuro */
 }
 
 .servicio:hover {
@@ -87,17 +103,10 @@ h2 {
   width: 300px;
   margin: 15px;
   border-radius: 10px;
-  transition: transform 0.3s;
-  border: 2px solid #fff; /* Borde blanco para las imágenes */
-}
-
-.galeria img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 section {
-  padding: 40px 0; /* Espaciado entre secciones */
+  padding: 40px 0;
 }
 
 footer {
@@ -107,37 +116,43 @@ footer {
 }
 
 button.btn-danger {
-  background-color: #ff4500; /* Color vibrante para el botón */
+  background-color: #ff4500;
   border: none;
-  color: #fff; /* Texto en blanco */
+  color: #fff;
 }
 
 button.btn-danger:hover {
-  background-color: #ffd700; /* Amarillo claro */
+  background-color: #ffd700;
   transform: scale(1.05);
   transition: background-color 0.3s, transform 0.3s;
 }
-.logo-section {
-  position: relative;
-  height: 150px; /* Altura total de la sección */
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.logo-background {
-  width: 150px; /* Igual al ancho del logo */
-  height: 145px; /* Reduce la altura en 5px */
-  background: url("img/4xZc.gif") no-repeat center center;
-  background-size: cover; /* Asegura que el GIF cubra el área */
-  position: absolute; /* Para que se superponga al logo */
-  border-radius: 50%; /* Hace que el GIF sea redondo */
-}
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
 
-.logo-image {
-  position: relative;
-  width: 150px; /* Tamaño del logo */
-  height: auto; /* Mantiene la proporción del logo */
-  z-index: 10; /* Asegura que el logo esté encima */
+  .logo-section {
+    margin-bottom: 10px; /* Espacio entre el logo y el título */
+  }
+
+  .servicio {
+    margin: 10px; /* Reduce el margen en pantallas pequeñas */
+  }
+
+  .galeria img {
+    width: 100%; /* Las imágenes ocuparán el 100% del ancho */
+    max-width: 300px; /* Mantiene un ancho máximo para evitar que se vuelvan demasiado grandes */
+  }
+
+  nav ul {
+    flex-direction: column; /* Cambia el menú a columna */
+    align-items: flex-start; /* Alinea los enlaces a la izquierda */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Reduce el margen entre los elementos del menú */
+  }
 }
